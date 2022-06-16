@@ -1,47 +1,47 @@
-#include &lt;stdio.h&gt;
-int main(void)
+#include <stdio.h>
+int main(void) 
 {
-struct student {
-char registerno[15];
-char firstname[64];
-char lastname[64];
-float marks;
+    struct student {
+    char registerno[15];
+    char firstname[64];
+    char lastname[64];
+    float marks;
 };
 struct student std[3];
 struct student *ptr = NULL;
 int i;
 ptr = std;
-for (i = 0; i &lt; 3; i++)
+for (i = 0; i < 3; i++) 
 {
-printf(&quot;Student Number%d\n&quot;, (i + 1));
-printf(&quot;Enter Registration Number: &quot;);
-scanf(&quot;%s&quot;, ptr-&gt;registerno);
-printf(&quot;Enter first name: &quot;);
-scanf(&quot;%s&quot;, ptr-&gt;firstname);
-printf(&quot;Enter last name: &quot;);
-scanf(&quot;%s&quot;, ptr-&gt;lastname);
-printf(&quot;Enter Marks: &quot;);
-scanf(&quot;%f&quot;, &amp;ptr-&gt;marks);
-ptr++;
+    printf("Student Number%d\n", (i + 1));
+    printf("Enter Registration Number: ");
+    scanf("%s", ptr->registerno);
+    printf("Enter first name: ");
+    scanf("%s", ptr->firstname);
+    printf("Enter last name: ");
+    scanf("%s", ptr->lastname);
+    printf("Enter Marks: ");
+    scanf("%f", &ptr->marks);
+    ptr++;
 }
 ptr = std;
-for (i = 0; i &lt; 3; i++)
-
+for (i = 0; i < 3; i++) 
 {
-printf(&quot;\nStudent Number%d\n&quot;, (i + 1));
-// display result via std variable
-printf(&quot;\nResult via std\n&quot;);
-printf(&quot;Registration Number: %s\n&quot;, std[i].registerno);
-printf(&quot;First Name: %s\n&quot;, std[i].firstname);
-printf(&quot;Last Name: %s\n&quot;, std[i].lastname);
-printf(&quot;Marks: %f\n&quot;, std[i].marks);
-// display result via ptr variable
-printf(&quot;\nResult via ptr\n&quot;);
-printf(&quot;Registration Number: %s\n&quot;, ptr-&gt;registerno);
-printf(&quot;First Name: %s\n&quot;, ptr-&gt;firstname);
-printf(&quot;Last Name: %s\n&quot;, ptr-&gt;lastname);
-printf(&quot;Marks: %f\n&quot;, ptr-&gt;marks);
-ptr++;
+    printf("\nStudent Number%d\n", (i + 1));
+    // display result via std variable
+    printf("\nResult via std\n");
+    printf("Registration Number: %s\n", std[i].registerno);
+    printf("First Name: %s\n", std[i].firstname);
+    printf("Last Name: %s\n", std[i].lastname);
+    printf("Marks: %f\n", std[i].marks);
+    // display result via ptr variable
+    printf("\nResult via ptr\n");
+    printf("Registration Number: %s\n", ptr->registerno);
+    printf("First Name: %s\n", ptr->firstname);
+    printf("Last Name: %s\n", ptr->lastname);
+    printf("Marks: %f\n", ptr->marks);
+    ptr++;
 }
-return 0;
+  
+  return 0;
 }
